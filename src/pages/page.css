@@ -1,0 +1,82 @@
+:root {
+  /* Color theme */
+  --primary-color: #2196f3;
+  --secondary-color: #ffc107;
+  --tertiary-color: #ff9800;
+  --quaternary-color: #ff5722;
+  --quinary-color: #795548;
+  --seventh-color: #607d8b;
+  --eighth-color: #e91e63;
+  --ninth-color: #9c27b0;
+  --tenth-color: #673ab7;
+  --eleventh-color: #3f51b5;
+  --twelfth-color: #03a9f4;
+  --thirteenth-color: #00bcd4;
+  --fourteenth-color: #009688;
+  --fifteenth-color: #4caf50;
+  --sixteenth-color: #8bc34a;
+  --seventeenth-color: #cddc39;
+  --eighteenth-color: #ffeb3b;
+  --nineteenth-color: #ffc107;
+  --twentieth-color: #ff9800;
+  --twenty-first-color: #ff5722;
+  --twenty-second-color: #795548;
+  --twenty-third-color: #607d8b;
+  --twenty-fourth-color: #e91e63;
+  --twenty-fifth-color: #9c27b0;
+  --twenty-sixth-color: #673ab7;
+  --twenty-seventh-color: #3f51b5;
+  --twenty-eighth-color: #03a9f4;
+  --twenty-ninth-color: #00bcd4;
+  --thirtieth-color: #009688;
+  --thirty-first-color: #4caf50;
+
+  /* Narrow page layout */
+  --narrow-width: 740px;
+
+  --easing: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body {
+  /* Accessible and reader friendly font */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.2;
+
+  /* Page background */
+  background-color: #fafafa;
+  margin: 0;
+}
+
+/* Fade in keyframes */
+@-webkit-keyframes showPage {
+  from {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+main {
+  /* Page outer margin */
+  max-width: var(--narrow-width);
+  margin: 1rem auto;
+  padding: 1rem;
+  transition: all 0.3s var(--easing);
+  animation: showPage 0.3s var(--easing) forwards;
+}
+
+@media (min-width: 600px) {
+  main {
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+}
+
+a {
+  color: var(--primary-color);
+}
