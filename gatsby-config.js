@@ -4,7 +4,7 @@ module.exports = {
     title: "blog",
   },
   plugins: [
-    "gatsby-plugin-emotion",
+    "gatsby-plugin-postcss",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
@@ -57,8 +57,8 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          posts: require.resolve("./src/components/posts-layout.js"),
-          default: require.resolve("./src/components/default-page-layout.js"),
+          posts: require.resolve("./src/page-layout/posts-layout.js"),
+          default: require.resolve("./src/page-layout/default-page-layout.js"),
         },
       },
     },

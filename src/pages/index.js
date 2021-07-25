@@ -1,13 +1,15 @@
 import React from "react";
-import Common from "../components/Common";
 import ListPosts from "../components/ListPosts";
+import Page from "../components/Page";
+import { ThemeProvider } from "../state/theme";
 
 const IndexPage = ({ children }) => {
   return (
-    <main>
-      <Common />
-      <ListPosts />
-    </main>
+    <ThemeProvider>
+      <Page>
+        <ListPosts />
+      </Page>
+    </ThemeProvider>
   );
 };
 

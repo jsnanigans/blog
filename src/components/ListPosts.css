@@ -1,0 +1,32 @@
+.layout {
+  /* Responsive grid layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.teaser {
+  /* Styled container */
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.teaser p {
+  margin: 0.5rem 0 0;
+}
+
+.teaser a {
+  font-weight: bold;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.teaser a:hover {
+  /* text-decoration: underline; */
+}
