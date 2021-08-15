@@ -7,7 +7,7 @@ export default function ListItem({ post }) {
 
   const handleMouse = (e) => {
     const elLeft = el.current.getBoundingClientRect().left;
-    const mousePosition = e.pageX || e.touches[0].pageX;
+    const mousePosition = e.pageX ?? e.touches[0].pageX;
     setW(((mousePosition - elLeft + 20) / el.current.offsetWidth) * 100);
   };
 

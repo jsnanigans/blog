@@ -36,7 +36,7 @@
 .teaser .text,
 .teaser .box {
   padding: 15px;
-  width: 100vw;
+  width: calc(100vw - 15px - 65px);
   padding-left: 65px;
   overflow: hidden;
 }
@@ -53,6 +53,7 @@
 .teaser p {
   margin: 0.6rem 0 0 0;
   width: calc(100%);
+  padding-right: 2rem;
 }
 
 .teaser .icon {
