@@ -2,7 +2,7 @@
   /* Responsive grid layout */
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  grid-gap: 1px;
 }
 
 .teaser {
@@ -12,7 +12,7 @@
   z-index: 1;
   transition: all 0.2s ease-in-out;
   color: var(--primary-color);
-  width: 600px;
+  width: 100vw;
 }
 
 .teaser a {
@@ -25,18 +25,19 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 15%;
   background-color: var(--primary-color);
   /* box-shadow: 0 0 90px 0 var(--primary-color); */
   color: #000;
   overflow: hidden;
+  /* border-radius: 5px; */
+  min-width: 80px;
 }
 
 .teaser .text,
 .teaser .box {
   padding: 15px;
-  width: 600px;
-  padding-left: 60px;
+  width: 100vw;
+  padding-left: 65px;
   overflow: hidden;
 }
 
@@ -61,4 +62,5 @@
   font-size: 5rem;
   transform: translate(70%, 0);
   width: 80px;
+  min-width: 80px;
 }

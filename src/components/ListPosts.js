@@ -1,6 +1,7 @@
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import "./ListPosts.css";
 import React from "react";
+import ListItem from "./ListItem";
 
 function ListPosts() {
   const { allMdx: posts } = useStaticQuery(graphql`
@@ -25,22 +26,7 @@ function ListPosts() {
   return (
     <div className="layout">
       {posts.nodes.map((post) => (
-        <div className="teaser" key={post.slug}>
-          <Link to={`/${post.slug}`}>
-            <div className="text">
-              <h3>{post.frontmatter.title}</h3>
-              <p>{post.frontmatter.lead}</p>
-            </div>
-
-            <div className="bg" aria-hidden>
-              <div className="box">
-                <img className="icon" src={post.frontmatter.image} />
-                <h3>{post.frontmatter.title}</h3>
-                <p>{post.frontmatter.lead}</p>
-              </div>
-            </div>
-          </Link>
-        </div>
+        <ListItem post={post} key={post.slug} />
       ))}
     </div>
   );
