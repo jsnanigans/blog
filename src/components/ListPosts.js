@@ -10,10 +10,11 @@ function ListPosts() {
           frontmatter {
             title
             lead
+            image
           }
           slug
-          timeToRead
           id
+          timeToRead
         }
       }
     }
@@ -25,8 +26,20 @@ function ListPosts() {
     <div className="layout">
       {posts.nodes.map((post) => (
         <div className="teaser" key={post.slug}>
-          <Link to={`/${post.slug}`}>{post.frontmatter.title}</Link>
-          <p>{post.frontmatter.lead}</p>
+          <Link to={`/${post.slug}`}>
+            <div className="text">
+              <h3>{post.frontmatter.title}</h3>
+              <p>{post.frontmatter.lead}</p>
+            </div>
+
+            <div className="bg" aria-hidden>
+              <div className="box">
+                <img className="icon" src={post.frontmatter.image} />
+                <h3>{post.frontmatter.title}</h3>
+                <p>{post.frontmatter.lead}</p>
+              </div>
+            </div>
+          </Link>
         </div>
       ))}
     </div>

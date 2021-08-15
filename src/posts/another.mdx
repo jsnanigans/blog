@@ -1,17 +1,44 @@
 ---
-title: Another post
+title: Issues and Solutions I came across while developing a PWA
 date: 2019-01-29
-lead: Some other post
+slug: pwas-in-2021
+lead: Exploring the state of PWA
+image: /icons/pwa.svg
 ---
 
-# Another
+## Fill whole screen
 
-Here's a YouTube embed
+to use all the available space for IOs Safari use position fixed
 
-this is something
+## Layout
 
-```js
-const x = "123";
+- flexbox and 100% height
+- scrolling area with flexbox and height: 0
+
+## disable pinch zoom
+
+```html
+<meta name="viewport" content="width=device-width, user-scalable=no" />
 ```
 
-> asd
+not workin, fixed with:
+
+```css
+* {
+  touch-action: pan-x pan-y;
+}
+```
+
+can a user zoom out? - no
+
+ios safari will zoom in if a user focuses on a text input where the font size is less than 16px
+
+```css
+* {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+```
+
+with this the browser wont zoom when user focuses on textfields. dont know of any other "auto-zoom" events
+`maximum-scale=1` in the meta tag might help too
